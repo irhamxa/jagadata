@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <!-- Content Security Policy: Tanpa Panggilan Eksternal, Aman dari Injeksi -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; base-uri 'self'; form-action 'self';">
+
+  <title>JagaData - Edukasi Keamanan Data Pribadi & Anti-Scam Indonesia</title>
+  <meta name="description" content="Platform edukasi mandiri perlindungan data pribadi, panduan mengenali scam, phishing, APK berbahaya, hingga hak sesuai UU PDP. Bebas akun dan ramah lansia.">
+  <meta name="theme-color" content="#0284c7">
+
+  <!-- Stylesheet Tunggal Mandiri -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header & Navigasi Utama -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <!-- Logo Brand -->
+        <a href="#/" class="brand-logo" aria-label="JagaData Beranda">
+          <div class="brand-icon" aria-hidden="true">🛡️</div>
+          <div class="brand-text">
+            <span class="brand-name">JagaData</span>
+            <span class="brand-badge">Edukasi Siber Publik</span>
+          </div>
+        </a>
+
+        <!-- Navigasi Menu Desktop -->
+        <nav aria-label="Menu Utama">
+          <ul class="nav-links">
+            <li><a href="#/" class="nav-link active">Beranda</a></li>
+            <li><a href="#/levels" class="nav-link">Tingkatan Level</a></li>
+            <li><a href="#/cek-cepat" class="nav-link" style="color: var(--color-danger); font-weight: 700;">🚨 Cek Cepat Penipuan</a></li>
+            <li><a href="#/tentang" class="nav-link">Tentang</a></li>
+          </ul>
+        </nav>
+
+        <!-- Pengaturan Aksesibilitas (Ukuran Huruf & Tema) -->
+        <div class="header-controls">
+          <div class="control-btn-group" aria-label="Pengatur Ukuran Teks">
+            <button id="btn-font-normal" class="control-btn active" title="Ukuran Font Standar" aria-label="Ukuran font standar">A</button>
+            <button id="btn-font-large" class="control-btn" title="Ukuran Font Besar (Ramah Lansia)" aria-label="Ukuran font besar">A+</button>
+            <button id="btn-font-xlarge" class="control-btn" title="Ukuran Font Sangat Besar" aria-label="Ukuran font ekstra besar">A++</button>
+          </div>
+          <button id="btn-theme-toggle" class="control-btn" style="background-color: var(--bg-hover); border: 1px solid var(--border-light); border-radius: var(--radius-md);" title="Ganti Mode Tampilan (Gelap / Terang)">
+            🌓 Mode
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Area Konten Utama Dinamis (Diisi oleh Router Hash app.js) -->
+  <main id="app" class="main-view" role="main">
+    <div class="container" style="text-align: center; padding: 3rem 1rem;">
+      <p style="color: var(--text-muted); font-size: 1.1rem;">Memuat materi pembelajaran aman...</p>
+    </div>
+  </main>
+
+  <!-- Footer Situs -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <div style="font-weight: 800; font-size: 1.1rem; color: var(--text-main); margin-bottom: 0.25rem;">
+            JagaData
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-subtle); max-width: 45ch; line-height: 1.5;">
+            Inisiatif edukasi publik independen untuk mengurangi korban penipuan siber di Indonesia. Tanpa akun, tanpa pelacak, dan 100% tersimpan di peramban Anda.
+          </p>
+        </div>
+
+        <div>
+          <ul class="footer-links">
+            <li><a href="#/" class="footer-link">Beranda</a></li>
+            <li><a href="#/levels" class="footer-link">Kurikulum Level</a></li>
+            <li><a href="#/cek-cepat" class="footer-link">Darurat Penipuan</a></li>
+            <li><a href="#/privasi" class="footer-link">Kebijakan Privasi</a></li>
+            <li><a href="#/tentang" class="footer-link">Tentang</a></li>
+            <li><a href="#" id="footer-reset-btn" class="footer-link" style="color: var(--color-danger);">Atur Ulang Progres</a></li>
+          </ul>
+          <div style="margin-top: 0.75rem; font-size: 0.8rem; color: var(--text-subtle);">
+            Materi disusun berdasarkan UU PDP No. 27 Tahun 2022 & Panduan Literasi Siber Nasional.
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts Urutan Dependensi: Konten -> Storage -> Quiz -> App -->
+  <script src="data/content.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
